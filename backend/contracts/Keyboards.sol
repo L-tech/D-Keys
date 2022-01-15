@@ -2,7 +2,18 @@
 pragma solidity ^0.8.4;
 
 contract Keyboards {
-    string[] public createdKeyboards;
+    enum KeyboardKind { 
+	    SixtyPercent, 
+	    SeventyFivePercent,
+        EightyPercent, 
+	    Iso105 
+	}
+    struct Keyboard {
+        KeyboardKind kind; 
+        bool isPBT;
+        string filter;
+    }
+    Keyboard[] public createdKeyboards;
 
     function getKeyboards() view public returns(string[] memory) {
         return createdKeyboards;
