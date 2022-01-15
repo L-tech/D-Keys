@@ -15,11 +15,18 @@ contract Keyboards {
     }
     Keyboard[] public createdKeyboards;
 
-    function getKeyboards() view public returns(string[] memory) {
+    function getKeyboards() view public returns(Keyboard[] memory) {
         return createdKeyboards;
     }
 
-    function create(string calldata _description) external {
-        createdKeyboards.push(_description);
-    }
+    function create(KeyboardKind _kind, bool _isPBT, string calldata _filter) external {
+        Keyboard memory newKeyboard = Keyboard({
+        kind: _kind,
+        isPBT: _isPBT,
+        filter: _filter
+        });
+
+        createdKeyboards.push(newKeyboard);
+}
+
 }
