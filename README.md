@@ -2,7 +2,7 @@ This is a Decentalized App built with Solidy and Next Js.
 
 ## Dapp Preview
 
-Open [http://localhost:3000](On Chrome) or any browser that has metamask to check the app.
+Open [https://d-keys.vercel.app/](https://d-keys.vercel.app/) on Chrome or any browser that has metamask to check the app.
 
 
 ## Getting Started
